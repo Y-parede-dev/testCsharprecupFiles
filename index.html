@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1.title{
+        margin: auto;
+        width: fit-content;
+        font-size: 3rem;
+        color: red;
+        }
+    p.test_p{
+        cursor: pointer;
+        font-size: 2rem;
+        color: blue;
+    }p.test_p:hover{
+        font-size: 2.05rem;
+        background: rgba(0,0,0,.4);
+    }
+    
+</style>
+
+<body>
+    <h1 class="title">Test data</h1>
+    <p onclick="testF()" id="testP" class="test_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo non dolore dolorem odio est id, molestiae temporibus. In, voluptates distinctio provident similique fugit corporis voluptas quod, reiciendis quia velit unde.
+    Dolorem dolor reiciendis placeat fugiat, officia mollitia. Optio, libero! Doloremque aliquid totam consectetur at nemo vero pariatur ab blanditiis! Ducimus vel reprehenderit incidunt aliquid cumque nihil assumenda nisi quos deserunt!
+    Iste, sunt ut, eligendi non, asperiores molestias culpa quam ipsam pariatur odio animi. Inventore, nesciunt ex minus officia aspernatur possimus, tempore voluptates exercitationem totam quibusdam harum corrupti eveniet, blanditiis veniam.
+    Deleniti nesciunt, tenetur architecto mollitia assumenda magnam eum aspernatur eius sint perferendis voluptas delectus natus, quasi maxime voluptates qui cumque corporis modi incidunt doloribus harum? Necessitatibus reprehenderit qui iusto facere.
+    Eius nam ab laudantium animi cum nobis aperiam temporibus ipsa perspiciatis sequi laboriosam repudiandae accusamus laborum similique, iure expedita quisquam aut eos? Nemo nostrum consectetur impedit exercitationem earum, eos repudiandae!</p>
+</body>
+<script>
+    const p = document.querySelector("#testP");
+    const p1 = document.createElement('button');
+    let first = false;
+    const testF = () => {
+        
+        if(!first ){
+            p.style.color="#fff";
+            p.style.backgroundColor="#000";
+            first=true;
+        }else{
+            p.style.color="#000";
+            p.style.backgroundColor="#fff";
+            first = false;
+        }
+        console.log(p.style);
+    }
+    // try {
+        
+    //     p.document.addEventListener('click', (e) => {
+    //         console.log(e)
+    //     }) 
+        
+    // } catch (error) {
+    //     console.log(error)
+    // }
+</script>
+</html>
